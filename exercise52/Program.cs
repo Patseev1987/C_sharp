@@ -14,7 +14,7 @@ void FindSum(int[,] myArray)
 {
     Console.WriteLine("Enter the number of columns:");
     int number = int.Parse(Console.ReadLine());
-    int sum = 0;
+    double sum = 0;
 
     if (number > 0 && number <= myArray.GetLength(1))
     {
@@ -24,7 +24,7 @@ void FindSum(int[,] myArray)
             sum = myArray[i, (number - 1)] + sum;
         }
 
-        Console.WriteLine($"The sum is {sum}");
+        Console.WriteLine($"The average is {sum/myArray.GetLength(1)}");
         Console.WriteLine();
         Console.WriteLine("You can check:");
         ShowArray(myArray);
