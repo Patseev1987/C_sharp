@@ -1,14 +1,14 @@
 ﻿Console.Clear();
-void ShowArray (int[,] yArray)
+void ShowArray(int[,] yArray)
 {
-            for (int i = 0; i < yArray.GetLength(0); i++)
+    for (int i = 0; i < yArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < yArray.GetLength(1); j++)
         {
-            for (int j = 0; j < yArray.GetLength(1); j++)
-            {
-                Console.Write($"{yArray[i, j]}   ");
-            }
-            Console.WriteLine();
+            Console.Write($"{yArray[i, j]}   ");
         }
+        Console.WriteLine();
+    }
 }
 void FindSum(int[,] myArray)
 {
@@ -24,7 +24,7 @@ void FindSum(int[,] myArray)
             sum = myArray[i, (number - 1)] + sum;
         }
 
-        Console.WriteLine($"The average is {sum/myArray.GetLength(1)}");
+        Console.WriteLine($"The average is {sum / myArray.GetLength(1)}");
         Console.WriteLine();
         Console.WriteLine("You can check:");
         ShowArray(myArray);
